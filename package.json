@@ -1,0 +1,30 @@
+{
+  "name": "@hurtigruten/aion",
+  "version": "1.0.0",
+  "description": "Tiny date utility library",
+  "main": "index.ts",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hurtigruten/aion.git"
+  },
+  "keywords": [
+    "date",
+    "time",
+    "javascript",
+    "utilities"
+  ],
+  "author": "Hurtigruten",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hurtigruten/aion/issues"
+  },
+  "homepage": "https://github.com/hurtigruten/aion#readme",
+  "devDependencies": {
+    "jsdom": "19.0.0",
+    "typescript": "4.6.3",
+    "vitest": "0.9.3"
+  }
+}
