@@ -11,7 +11,11 @@ const parseDate = (
     4
   )} ${reducedSpecials.substring(4, 6)} ${reducedSpecials.substring(6, 8)}`;
   const formattedParsedDate = new Date(splitDateString);
-  if (isDateValid(formattedParsedDate)) return formattedParsedDate;
+  const userTimezoneOffset = formattedParsedDate.getTimezoneOffset() * 60000;
+  const formattedParsedDateWithTZ = new Date(
+    formattedParsedDate.getTime() - userTimezoneOffset
+  );
+  if (isDateValid(formattedParsedDateWithTZ)) return formattedParsedDateWithTZ;
 
   if (pattern.trim().length !== input.trim().length) return new Date(input);
 

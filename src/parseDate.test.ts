@@ -57,4 +57,16 @@ describe('parseDate', () => {
     expect(result3.getMonth()).toEqual(1);
     expect(result3.getFullYear()).toEqual(2031);
   });
+
+  test('should parse date without time', () => {
+    const input: string = '2022-03-10';
+
+    const result: Date = parseDate(input);
+
+    expect(isDateValid(result)).toBeTruthy();
+    expect(result.getDate()).toEqual(10);
+    expect(result.getMonth()).toEqual(2);
+    expect(result.getFullYear()).toEqual(2022);
+    expect(result).toEqual(new Date('2022-03-10T00:00:00.000Z'));
+  });
 });
